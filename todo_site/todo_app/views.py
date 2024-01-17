@@ -3,9 +3,10 @@ from django.contrib import messages
 from .forms import TodoFrom, todoForm
 from .models import Todo, Todos
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_protect
 # Create your views here.
 
-
+@csrf_protect
 def index(request):
     if request.method == 'POST':
         title = request.POST.get('title') 

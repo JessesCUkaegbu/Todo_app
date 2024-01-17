@@ -38,10 +38,10 @@
             <div class="">
               <form id="todo-form" method="POST" action="{% url 'index' %}" class="d-flex justify-content-center align-items-center mb-4">
                 {% csrf_token %}
+                
                 <input type="text" name="title" class="form-control form-control-lg p-5" placeholder="Add new...">
                 <a href="" data-mdb-toggle="tooltip" title="Set due date"><i
                     class="fas fa-calendar-alt fa-lg me-3 px-4"></i></a>
-
                     <div>
                       <button type="submit" class="btn btn-primary">Add</button>
                     </div>

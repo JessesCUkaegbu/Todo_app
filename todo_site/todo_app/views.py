@@ -24,12 +24,14 @@ def mark_todo(request, pk):
     todo_list = Todos.objects.all().order_by('-id')
     return render(request, 'index.html', {'todo_list': todo_list})
 
+@csrf_protect
 def delete_todo(request, pk):
     todo = Todos.objects.get(pk=pk)
     todo.delete()
     todo_list = Todos.objects.all().order_by('-id')
     return render(request, 'index.html', {'todo_list': todo_list})
-
+    
+@csrf_protect
 def edit_todo(request, pk):
     if request.method == 'POST':
         todo = Todos.objects.get(pk=pk)

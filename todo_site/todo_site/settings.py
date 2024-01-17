@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y)pi(5s#!!gfps)&ww4wj6&$jq$$gmn@0!m^@)!dn7-gefyy!('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -131,6 +131,8 @@ STATICFILES_DIRS = [
     '/todo_app/static/',
     # Add more paths as needed
 ]
+
+CSRF_TRUSTED_ORIGINS = ['https://todoapp-production-16fa.up.railway.app']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

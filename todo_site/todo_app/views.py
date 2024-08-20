@@ -40,3 +40,4 @@ def edit_todo(request, pk):
         todo.save()
     todo = Todos.objects.get(pk=pk)
     return render(request, 'edit.html', {'todo': todo})
+
